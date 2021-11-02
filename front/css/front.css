@@ -4382,14 +4382,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-gray {
-    color: #4A5073;
-    border-color: #4A5073;
+    color: #e71775;
+    border-color: #e71775;
 }
 
 .btn-outline-gray:hover {
     color: #ffffff;
-    background-color: #4A5073;
-    border-color: #4A5073;
+    background-color: #e71775;
+    border-color: #e71775;
 }
 
 .btn-outline-gray:focus, .btn-outline-gray.focus {
@@ -18386,7 +18386,7 @@ a.text-gray-800:hover, a.text-gray-800:focus {
 }
 
 .headroom--not-top.navbar-theme-primary {
-    background-color: #0648B3;
+    background-color: #e71775;
 }
 
 .headroom--not-top.navbar-theme-primary .navbar-brand-light {
