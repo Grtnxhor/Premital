@@ -43,7 +43,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="front/assets/img/8.png">
 <link rel="icon" type="image/png" sizes="16x16" href="front/assets/img/8.png">
 <link rel="manifest" href="manifest.json">
-<link rel="mask-icon" href="front/assets/img/logo.png" color="#e71775">
+<link rel="mask-icon" href="front/assets/img/8.png" color="#e71775">
 <meta name="msapplication-TileColor" content="#e71775">
 <meta name="theme-color" content="#e71775">
 
@@ -550,8 +550,31 @@
 <script src="./front/assets/js/front.js"></script>
 <script src="./front/assets/js/jquery.waypoints.min.js"></script>
 <script src="./front/assets/js/scrollcat.js"></script>
-
-    
+<script>
+    if ('serviceWorker' in navigator) {
+      console.log("Will the service worker register?");
+      navigator.serviceWorker.register('service-worker.js')
+        .then(function(reg){
+          console.log("Yes, it did.");
+        }).catch(function(err) {
+          console.log("No it didn't. This happened: ", err)
+        });
+    }
+  </script>
+  <script>
+          // Service worker for Progressive Web App
+      if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('service-worker.js', {
+              scope: '.' // THIS IS REQUIRED FOR RUNNING A PROGRESSIVE WEB APP FROM A NON_ROOT PATH
+          }).then(function(registration) {
+              // Registration was successful
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+              // registration failed :(
+              console.log('ServiceWorker registration failed: ', err);
+          });
+      }
+  </script> 
 </body>
 
 </html>
